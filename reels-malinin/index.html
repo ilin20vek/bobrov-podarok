@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Рилсы: Бизнес против маркетинга</title>
+<style>
+:root{--bg:#0e0e0f;--pl:#1c1c1e;--li:#2c2c2e;--tx:#f2f2f2;--mut:#a7a7ad;--ak:#ff6a00}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 Roboto,Arial,sans-serif}
+.w{max-width:1120px;margin:0 auto;padding:0 16px}
+.hero{text-align:center;padding:40px 16px 20px}
+.bpr{font-size:15px;letter-spacing:.32em;text-transform:uppercase;color:var(--mut)}
+.vyp{display:block;max-width:560px;width:100%;border-radius:14px;margin:22px auto 16px}
+h1{font-size:clamp(26px,4.6vw,42px);line-height:1.12;margin:0 0 12px}
+.lead{max-width:720px;margin:0 auto;color:#d6d6da;font-size:18px} .lead a{color:var(--ak)}
+.pod{color:var(--mut);margin:26px 0 18px;text-align:center}
+.setka{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px 12px}
+.pl{all:unset;cursor:pointer;display:block}
+.pl img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;display:block;background:#222}
+.pl:hover img{outline:2px solid var(--ak)} .nz{display:block;margin:8px 2px 0;font-weight:500;line-height:1.3}
+.b{display:inline-block;background:#3a3a3c;color:var(--tx);border:0;border-radius:22px;padding:11px 20px;text-decoration:none;font:600 15px inherit;cursor:pointer;margin:4px}
+.b:hover{filter:brightness(1.15)}
+footer{text-align:center;color:var(--mut);padding:32px 16px 56px;font-size:14px}
+.okno{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;padding:16px;z-index:9} .okno.on{display:flex}
+.vn{background:var(--pl);border-radius:16px;max-width:860px;width:100%;max-height:94vh;overflow:auto;display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:18px;padding:16px}
+.vn video{width:100%;aspect-ratio:9/16;border-radius:12px;background:#000} .vn h3{margin:2px 0 8px;font-size:20px} .vn p{color:#ddd;margin:0 0 10px}
+.vn textarea{width:100%;height:130px;background:#141414;color:var(--mut);border:1px solid var(--li);border-radius:8px;padding:8px;font:13px/1.4 inherit}
+.zakr{float:right;background:none;border:0;color:var(--mut);font-size:26px;cursor:pointer} .zakr2{position:fixed;top:10px;right:10px;z-index:10;background:#ffffffee;color:#111;border:0;border-radius:22px;padding:10px 16px;font:700 16px Roboto,Arial,sans-serif;cursor:pointer;box-shadow:0 2px 10px #0008}
+@media(max-width:640px){.okno{align-items:flex-start;padding-top:60px} .vn{grid-template-columns:1fr} .vn video{max-width:300px;margin:0 auto;display:block} .setka{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<header class="hero">
+  <div class="bpr">Бизнес по-русски</div>
+  <img class="vyp" src="o/vypusk.jpg" alt="Бизнес против маркетинга">
+  <h1>12 роликов из выпуска «Бизнес против маркетинга»</h1>
+  <p class="lead">Дмитрий Бобров и Игорь Малинин. <a href="https://youtu.be/WIVcEjFK47k">Полный выпуск на YouTube</a></p>
+</header>
+<main class="w">
+  <p class="pod">Нажмите на обложку: ролик запустится, рядом название, описание и кнопки «скачать».</p>
+  <div class="setka">
+      <button class="pl" onclick="otkryt(0)"><img src="o/bobrov-n19-ii-agenty-vmesto-15.jpg" alt="" loading="lazy">
+        <span class="nz">Заменил 15 сотрудников ИИ-агентами. Что вышло?</span></button>
+      <button class="pl" onclick="otkryt(1)"><img src="o/bobrov-n20-proizvesti-legche-chem-prodat.jpg" alt="" loading="lazy">
+        <span class="nz">Почему хороший товар не продаётся сам</span></button>
+      <button class="pl" onclick="otkryt(2)"><img src="o/bobrov-n21-sklad-sgorel.jpg" alt="" loading="lazy">
+        <span class="nz">Продаёте только на маркетплейсе? Что будет после пожаров</span></button>
+      <button class="pl" onclick="otkryt(3)"><img src="o/bobrov-n22-uchebnik-v-gpt.jpg" alt="" loading="lazy">
+        <span class="nz">Учебник за студента читает ChatGPT. Чем это кончится</span></button>
+      <button class="pl" onclick="otkryt(4)"><img src="o/bobrov-n23-sobstvennik-ne-na-svoey-polyane.jpg" alt="" loading="lazy">
+        <span class="nz">Главная ошибка собственника бизнеса</span></button>
+      <button class="pl" onclick="otkryt(5)"><img src="o/bobrov-n24-dorozhe-zheleznyh-dorog.jpg" alt="" loading="lazy">
+        <span class="nz">Что сегодня стоит дороже заводов и железных дорог</span></button>
+      <button class="pl" onclick="otkryt(6)"><img src="o/bobrov-n25-sluzhanka-otdela-prodazh.jpg" alt="" loading="lazy">
+        <span class="nz">Маркетинг - служанка продаж? Ответ - два слова</span></button>
+      <button class="pl" onclick="otkryt(7)"><img src="o/bobrov-n26-zoloto-ii-analitika.jpg" alt="" loading="lazy">
+        <span class="nz">Тексты и картинки - верхушка. Где настоящее золото ИИ</span></button>
+      <button class="pl" onclick="otkryt(8)"><img src="o/bobrov-n27-kartinochki-za-10-tysyach.jpg" alt="" loading="lazy">
+        <span class="nz">Маркетинг - расход или главный источник дохода?</span></button>
+      <button class="pl" onclick="otkryt(9)"><img src="o/bobrov-n28-lichnyy-brend.jpg" alt="" loading="lazy">
+        <span class="nz">Почему людям нужен ты, а не логотип</span></button>
+      <button class="pl" onclick="otkryt(10)"><img src="o/bobrov-n29-kogo-ii-vytesnit.jpg" alt="" loading="lazy">
+        <span class="nz">Кого ИИ вытеснит первым</span></button>
+      <button class="pl" onclick="otkryt(11)"><img src="o/bobrov-n30-posle-studencheskoy-skami.jpg" alt="" loading="lazy">
+        <span class="nz">Что делать выпускнику, если работу забрал ИИ: два шага</span></button>
+  </div>
+</main>
+<footer>«Бизнес по-русски»</footer>
+<div class="okno" id="okno" onclick="if(event.target===this)zakryt()"><button class="zakr2" onclick="zakryt()" aria-label="Закрыть">× Закрыть</button><div class="vn">
+  <div><video id="vid" controls playsinline></video></div>
+  <div><button class="zakr" onclick="zakryt()">×</button><h3 id="nz"></h3><p id="op"></p>
+  <textarea id="tx" readonly></textarea>
+  <div><a class="b" id="dv" download>Скачать ролик</a><a class="b" id="do" download>Скачать обложку</a><button class="b" onclick="kop(this)">Скопировать текст</button></div></div>
+</div></div>
+<script>
+var D=[{"id": "bobrov-n19-ii-agenty-vmesto-15", "nazv": "Заменил 15 сотрудников ИИ-агентами. Что вышло?", "opis": "Дмитрий Бобров: в консалтинге вместо 15 специалистов по бизнес-плану внедрили ИИ-агентов по четырём направлениям; вложения окупятся за полгода, но выводы делать рано", "tekst": "Заменил 15 сотрудников ИИ-агентами. Что вышло?\n\nДмитрий Бобров: в консалтинге вместо 15 специалистов по бизнес-плану внедрили ИИ-агентов по четырём направлениям; вложения окупятся за полгода, но выводы делать рано\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=2333\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n20-proizvesti-legche-chem-prodat", "nazv": "Почему хороший товар не продаётся сам", "opis": "Дмитрий Бобров: произвести легче, чем продать; без привлечения клиентов продажи невозможны, спрос мотивирует производство - без маркетинга никуда", "tekst": "Почему хороший товар не продаётся сам\n\nДмитрий Бобров: произвести легче, чем продать; без привлечения клиентов продажи невозможны, спрос мотивирует производство - без маркетинга никуда\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=3060\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n21-sklad-sgorel", "nazv": "Продаёте только на маркетплейсе? Что будет после пожаров", "opis": "Дмитрий Бобров: селлерам не уходить полностью от прежних каналов продаж; после пожаров складов маркетплейса торговавшие только там остались не у дел, а со своим интернет-магазином переключили покупателей", "tekst": "Продаёте только на маркетплейсе? Что будет после пожаров\n\nДмитрий Бобров: селлерам не уходить полностью от прежних каналов продаж; после пожаров складов маркетплейса торговавшие только там остались не у дел, а со своим интернет-магазином переключили покупателей\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=1509\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n22-uchebnik-v-gpt", "nazv": "Учебник за студента читает ChatGPT. Чем это кончится", "opis": "Дмитрий Бобров: студенты не читают учебников, загоняют их в ChatGPT за кратким содержанием; Игорь Малинин: развивайте свою нейросеть - головной мозг, тогда ИИ инструмент, а не конкурент", "tekst": "Учебник за студента читает ChatGPT. Чем это кончится\n\nДмитрий Бобров: студенты не читают учебников, загоняют их в ChatGPT за кратким содержанием; Игорь Малинин: развивайте свою нейросеть - головной мозг, тогда ИИ инструмент, а не конкурент\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=483\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n23-sobstvennik-ne-na-svoey-polyane", "nazv": "Главная ошибка собственника бизнеса", "opis": "Дмитрий Бобров: собственники на консультациях путают свой функционал с функцией генерального директора, лезут в операционку и забывают стратегию; без маркетинга её не выстроить", "tekst": "Главная ошибка собственника бизнеса\n\nДмитрий Бобров: собственники на консультациях путают свой функционал с функцией генерального директора, лезут в операционку и забывают стратегию; без маркетинга её не выстроить\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=3173\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n24-dorozhe-zheleznyh-dorog", "nazv": "Что сегодня стоит дороже заводов и железных дорог", "opis": "Дмитрий Бобров: в начале XX века ценились активы, во второй половине - бренд (Coca-Cola дороже многих железных дорог), сейчас дороже всего компании, владеющие данными", "tekst": "Что сегодня стоит дороже заводов и железных дорог\n\nДмитрий Бобров: в начале XX века ценились активы, во второй половине - бренд (Coca-Cola дороже многих железных дорог), сейчас дороже всего компании, владеющие данными\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=902\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n25-sluzhanka-otdela-prodazh", "nazv": "Маркетинг - служанка продаж? Ответ - два слова", "opis": "Вопрос Дмитрия Боброва: зачем маркетинг, если деньги даёт отдел продаж; Игорь Малинин: маркетинг - управление рынком, директор по маркетингу - второе лицо после предпринимателя", "tekst": "Маркетинг - служанка продаж? Ответ - два слова\n\nВопрос Дмитрия Боброва: зачем маркетинг, если деньги даёт отдел продаж; Игорь Малинин: маркетинг - управление рынком, директор по маркетингу - второе лицо после предпринимателя\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=187\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n26-zoloto-ii-analitika", "nazv": "Тексты и картинки - верхушка. Где настоящее золото ИИ", "opis": "Вопрос Дмитрия Боброва про ИИ для молодых маркетологов; Игорь Малинин: тексты и картинки - верхушка айсберга, золото ИИ - аналитика, выводы и гипотезы", "tekst": "Тексты и картинки - верхушка. Где настоящее золото ИИ\n\nВопрос Дмитрия Боброва про ИИ для молодых маркетологов; Игорь Малинин: тексты и картинки - верхушка айсберга, золото ИИ - аналитика, выводы и гипотезы\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=824\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n27-kartinochki-za-10-tysyach", "nazv": "Маркетинг - расход или главный источник дохода?", "opis": "Игорь Малинин: маркетолог не тот, кто постит картинки за 10 000; маркетинг не необходимое зло, а статья дохода; Дмитрий Бобров: выделяйте средства на маркетинг", "tekst": "Маркетинг - расход или главный источник дохода?\n\nИгорь Малинин: маркетолог не тот, кто постит картинки за 10 000; маркетинг не необходимое зло, а статья дохода; Дмитрий Бобров: выделяйте средства на маркетинг\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=3212\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n28-lichnyy-brend", "nazv": "Почему людям нужен ты, а не логотип", "opis": "Вопрос Дмитрия Боброва о личном бренде; Игорь Малинин: за вывеской прячутся от ответственности, людям нужна личность, с которой можно спросить; Бобров: личный бренд оставляет место на рынке", "tekst": "Почему людям нужен ты, а не логотип\n\nВопрос Дмитрия Боброва о личном бренде; Игорь Малинин: за вывеской прячутся от ответственности, людям нужна личность, с которой можно спросить; Бобров: личный бренд оставляет место на рынке\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=1093\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n29-kogo-ii-vytesnit", "nazv": "Кого ИИ вытеснит первым", "opis": "Игорь Малинин: пост и картинку ИИ уже делает; ремесленник без амбиций в опасности, кто растёт - получает инструмент; Дмитрий Бобров: профессионала ИИ не вытеснит", "tekst": "Кого ИИ вытеснит первым\n\nИгорь Малинин: пост и картинку ИИ уже делает; ремесленник без амбиций в опасности, кто растёт - получает инструмент; Дмитрий Бобров: профессионала ИИ не вытеснит\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=735\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}, {"id": "bobrov-n30-posle-studencheskoy-skami", "nazv": "Что делать выпускнику, если работу забрал ИИ: два шага", "opis": "Вопрос Дмитрия Боброва: что делать выпускнику, чьё место занял ИИ; Игорь Малинин: набивать руку для себя и идти в малый бизнес, где некогда разбираться с ИИ", "tekst": "Что делать выпускнику, если работу забрал ИИ: два шага\n\nВопрос Дмитрия Боброва: что делать выпускнику, чьё место занял ИИ; Игорь Малинин: набивать руку для себя и идти в малый бизнес, где некогда разбираться с ИИ\n\nПолное видео: https://youtu.be/WIVcEjFK47k?t=769\n\n#маркетинг #бизнес #предприниматель #ИИ #нейросети #shorts"}];
+function otkryt(i){var r=D[i];document.getElementById('nz').textContent=r.nazv;document.getElementById('op').textContent=r.opis;
+document.getElementById('tx').value=r.tekst;var v=document.getElementById('vid');v.poster='o/'+r.id+'.jpg';v.src='v/'+r.id+'.mp4';
+document.getElementById('dv').href='v/'+r.id+'.mp4';document.getElementById('do').href='o/'+r.id+'.jpg';document.getElementById('okno').classList.add('on');if(!history.state||!history.state.okno)history.pushState({okno:1},'');
+var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play()})}
+function zakryt(iz){var v=document.getElementById('vid');v.pause();document.getElementById('okno').classList.remove('on');if(!iz&&history.state&&history.state.okno)history.back()}
+window.addEventListener('popstate',function(){if(document.getElementById('okno').classList.contains('on'))zakryt(1)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')zakryt()});
+function kop(b){var t=document.getElementById('tx');t.select();try{navigator.clipboard.writeText(t.value)}catch(e){document.execCommand('copy')}
+b.textContent='Скопировано';setTimeout(function(){b.textContent='Скопировать текст'},1500)}
+</script>
+</body></html>
